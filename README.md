@@ -1,12 +1,10 @@
 # archinstall
 
----
-title: "Arch Install (btrfs & snapper)"
-tags: ""
----
+## "Arch Install (btrfs & snapper)"
 
 Assume booted from install media.
-CHange keyboard layout
+
+Change keyboard layout
 
 ```zsh
 loadkeys uk
@@ -25,8 +23,9 @@ ip a
 ```
 
 Wifi
-
+```
     placeholder
+```
 
 synchronise ntp
 
@@ -188,7 +187,7 @@ Sync hardware clock
 hwclock --systohc
 ```
 
-generate locales by editing `locale.gen` and un-commenting the required locales. then running 
+generate locales by editing `locale.gen` and un-commenting the required locales. then running
 
 ```zsh
 vim /etc/locale.gen
@@ -272,7 +271,7 @@ Edit `mkinitcpio.conf` to add `btrfs` module:
 vim /etc/mkinitcpio.conf
 ```
 
-and add `btrfs` to the modules section then build the image with 
+and add `btrfs` to the modules section then build the image with
 
 ```zsh
 mkinitcpio -p linux
@@ -316,7 +315,7 @@ Change password for user
 passwd phil
 ```
 
-Edit sudoers file and uncomment the line that allows members of `wheel` 
+Edit sudoers file and uncomment the line that allows members of `wheel`
 
 ```zsh
 EDITOR=vim visudo
